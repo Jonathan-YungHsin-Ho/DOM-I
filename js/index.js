@@ -81,6 +81,30 @@ mainHeader.innerText = siteContent.cta.h1.split(' ').join('\n');
 const button = document.querySelector('button');
 button.textContent = siteContent.cta.button;
 
+// Stretch Goal
+const darkButton = document.createElement('button');
+darkButton.textContent = 'Dark Mode';
+const ctaTxt = document.querySelector('.cta-text');
+ctaTxt.append(darkButton);
+
+darkButton.addEventListener('click', event => {
+  const body = document.querySelector('body');
+  body.style.backgroundColor = 'black';
+  body.style.color = 'lightgray';
+  updatedNavs.forEach(element => (element.style.color = 'lightgray'));
+});
+
+const lightButton = document.createElement('button');
+lightButton.textContent = 'Light Mode';
+ctaTxt.append(lightButton);
+
+lightButton.addEventListener('click', event => {
+  const body = document.querySelector('body');
+  body.style.backgroundColor = 'white';
+  body.style.color = 'black';
+  updatedNavs.forEach(element => (element.style.color = 'green'));
+});
+
 // Main Content //
 
 // Top Content

@@ -67,6 +67,59 @@ mainHeader.textContent = siteContent.cta.h1;
 const button = document.querySelector('button');
 button.textContent = siteContent.cta.button;
 
+// Main Content //
+
+// Top Content
+const topHeader1 = document.querySelector(
+  '.top-content .text-content:first-of-type h4',
+);
+const topContent1 = document.querySelector(
+  '.top-content .text-content:first-of-type p',
+);
+
+topHeader1.textContent = siteContent['main-content']['features-h4'];
+topContent1.textContent = siteContent['main-content']['features-content'];
+
+const topHeader2 = document.querySelector(
+  '.top-content .text-content:last-of-type h4',
+);
+const topContent2 = document.querySelector(
+  '.top-content .text-content:last-of-type p',
+);
+
+topHeader2.textContent = siteContent['main-content']['about-h4'];
+topContent2.textContent = siteContent['main-content']['about-content'];
+
+// Bottom Content
+const bottomHeader1 = document.querySelector(
+  '.bottom-content .text-content:first-of-type h4',
+);
+const bottomContent1 = document.querySelector(
+  '.bottom-content .text-content:first-of-type p',
+);
+
+bottomHeader1.textContent = siteContent['main-content']['services-h4'];
+bottomContent1.textContent = siteContent['main-content']['services-content'];
+
+const bottomHeader2 = document.querySelector(
+  '.bottom-content .text-content:nth-of-type(2) h4',
+);
+const bottomContent2 = document.querySelector(
+  '.bottom-content .text-content:nth-of-type(2) p',
+);
+
+bottomHeader2.textContent = siteContent['main-content']['product-h4'];
+bottomContent2.textContent = siteContent['main-content']['product-content'];
+
+const bottomHeader3 = document.querySelector(
+  '.bottom-content .text-content:last-of-type h4',
+);
+const bottomContent3 = document.querySelector(
+  '.bottom-content .text-content:last-of-type p',
+);
+bottomHeader3.textContent = siteContent['main-content']['vision-h4'];
+bottomContent3.textContent = siteContent['main-content']['vision-content'];
+
 // Contact
 const contactHeader = document.querySelector('.contact h4');
 contactHeader.textContent = siteContent.contact['contact-h4'];

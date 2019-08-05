@@ -47,11 +47,25 @@ let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
 // Nav Bar
-const nav = document.querySelectorAll('nav a');
-nav.forEach(
-  (element, index) =>
-    (element.textContent = Object.values(siteContent.nav)[index]),
-);
+const navs = document.querySelectorAll('nav a');
+navs.forEach((element, index) => {
+  element.textContent = Object.values(siteContent.nav)[index];
+  element.style.color = 'green';
+});
+
+// New Content
+const navBar = document.querySelector('nav');
+
+const firstLink = document.createElement('a');
+firstLink.textContent = 'First';
+navBar.prepend(firstLink);
+
+const lastLink = document.createElement('a');
+lastLink.textContent = 'Last';
+navBar.append(lastLink);
+
+const updatedNavs = document.querySelectorAll('nav a');
+updatedNavs.forEach(element => (element.style.color = 'green'));
 
 // Images
 const ctaImg = document.querySelector('#cta-img');

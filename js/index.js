@@ -46,8 +46,37 @@ const siteContent = {
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
-const ctaImg = document.getElementById('cta-img');
-ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+// Nav Bar
+const nav = document.querySelectorAll('nav a');
+nav.forEach(
+  (element, index) =>
+    (element.textContent = Object.values(siteContent.nav)[index]),
+);
 
-const middleImg = document.getElementById('middle-img');
-middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+// Images
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent.cta['img-src'];
+
+const middleImg = document.querySelector('#middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+// CTA
+const mainHeader = document.querySelector('h1');
+mainHeader.textContent = siteContent.cta.h1;
+
+const button = document.querySelector('button');
+button.textContent = siteContent.cta.button;
+
+// Contact
+const contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent.contact['contact-h4'];
+
+const contactInfo = document.querySelectorAll('.contact p');
+contactInfo.forEach(
+  (element, index) =>
+    (element.textContent = Object.values(siteContent.contact)[index + 1]),
+);
+
+// Footer
+const footerText = document.querySelector('footer p');
+footerText.textContent = siteContent.footer.copyright;

@@ -76,7 +76,7 @@ middleImg.src = siteContent['main-content']['middle-img-src'];
 
 // CTA
 const mainHeader = document.querySelector('h1');
-mainHeader.textContent = siteContent.cta.h1;
+mainHeader.innerText = siteContent.cta.h1.split(' ').join('\n');
 
 const button = document.querySelector('button');
 button.textContent = siteContent.cta.button;
@@ -143,6 +143,11 @@ contactInfo.forEach(
   (element, index) =>
     (element.textContent = Object.values(siteContent.contact)[index + 1]),
 );
+
+const addressArray = siteContent.contact.address.split(' ');
+addressArray.splice(4, 0, '\n');
+const address = contactInfo[0];
+address.innerText = addressArray.join(' ');
 
 // Footer
 const footerText = document.querySelector('footer p');

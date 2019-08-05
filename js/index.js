@@ -93,7 +93,7 @@ toggleButton.addEventListener('click', event => {
   const body = document.querySelector('body');
   if (toggle === false) {
     toggle = true;
-    body.style.backgroundColor = 'black';
+    body.style.backgroundColor = '#080808';
     body.style.color = 'lightgray';
     updatedNavs.forEach(element => (element.style.color = 'lightgray'));
   } else {
